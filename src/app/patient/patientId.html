@@ -1,0 +1,24 @@
+
+<table style="width: 140%">
+  <th style="width: 40%">
+<div class="block" >
+<div class="patientId">
+    <h2>name:  {{patient?.name}}</h2>
+     <h2>surname: {{patient?.surname}}</h2>
+    <h2>date of birth:  {{patient?.dateOfBirth}}</h2>
+    <h2>country:  {{patient?.country}}</h2>
+    <h2>state:  {{patient?.state}}</h2>
+    <h2>address:  {{patient?.address}}</h2>
+    <h2>sex:  {{patient?.sex}}</h2>
+</div>
+
+</div>
+    </th>
+  <th class="comments_class" style="width: 100% ; background: blueviolet">
+<div class="block">
+<div class="comments">
+  <app-comment [patient]="patient"></app-comment>
+</div>
+</div>
+  </th>
+</table>

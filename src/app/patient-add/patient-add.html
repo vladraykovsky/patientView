@@ -1,0 +1,19 @@
+
+<div class="add" >
+  <button (click) = "addr()">add patient</button>
+  <button  (click)="chancel()">chancel</button>
+  <h1>{{patient.name}}</h1>
+  <input [(ngModel)]="patient.name" placeholder="name"/>
+  <h1>{{patient.surname}}</h1>
+  <input [(ngModel)]="patient.surname" placeholder="surname"/>
+  <h1>{{patient.dateOfBirth}}</h1>
+  <input [(ngModel)]="patient.dateOfBirth" placeholder="date of birth in format ****-**-**"/>
+  <h1>{{patient.country}}</h1>
+  <input [(ngModel)]="patient.country" placeholder="country"/>
+  <h1>{{patient.state}}</h1>
+  <input [(ngModel)]="patient.state" placeholder="state"/>
+  <h1>{{patient.address}}</h1>
+  <input [(ngModel)]="patient.address" placeholder="adress"/>
+  <h1>{{patient.sex}}</h1>
+  <input [(ngModel)]="patient.sex" placeholder="sex"/>
+</div>

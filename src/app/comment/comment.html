@@ -1,0 +1,45 @@
+
+<body style="background: #a9a9a9;  border:1px solid black;width:170%;height:400px ;">
+<table>
+  <tr style="width:170%; height: 100%" bgcolor="#a9a9a9" >
+    <th>
+<div class="block" style=" overflow:scroll; width:170%;height:400px;">
+<div class="inside_coment" >
+   <h4>comments list</h4>
+
+  <div class="container" *ngFor="let comment of comments"  style="height: 60px; width: 250px;">
+  <!--   delete method   -->
+    <div class="dialogbox">
+      <div class="body">
+        <button (click)="delete(comment)" style="float: right">X</button>
+        <span class="tip tip-up"></span>
+        <div class="message">
+          <span style="width: 10px"  (click)="changeCommentValue(comment)" > {{comment.commentValue}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   <p *ngIf="displayChange == 1;then editComment "></p>
+  <br />
+</div>
+    </th>
+</tr>
+  <tr>
+    <th>
+<div class="addComment" style="width:170%; width: 100%;">
+ <input [(ngModel)]="newComment" style="width: 300px; height: 45px; float: left">
+  <button style="height: 45px;width: 45px; " (click)="add()">+</button>
+</div>
+    </th>
+  </tr>
+</table>
+<ng-template #editComment>
+  <input [(ngModel)] ="commentPointer.commentValue">
+  <button (click)="edit()"> save </button>
+</ng-template>
+
+
+</body>
+
+

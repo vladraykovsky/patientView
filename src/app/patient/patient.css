@@ -1,0 +1,19 @@
+
+h2 {
+  float: top;
+  margin-top: auto;
+}
+
+div.block{
+  display: inline;
+}
+
+div.block{
+  float: left;
+}.clear{
+   clear: both;
+ }.comments{
+     width: 100%;
+     float: right;
+
+   }

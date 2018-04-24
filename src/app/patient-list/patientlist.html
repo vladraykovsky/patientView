@@ -1,0 +1,46 @@
+
+
+
+<table>
+  <tr>
+    <th>
+<div class="topnav">
+  <input   [(ngModel)]="search" placeholder="search" />
+  <a routerLink="add"><button>add</button> </a>
+</div>
+    </th>
+<th class="view" width="100%">
+  <div class="topnav">
+    <h2> {{patientPointer?.name}}   {{patientPointer?.surname}}
+      <a><button (click)="GoToEditComponent()">edit</button>  </a>
+    <a><button (click)="deletePatient()" > delete </button></a>
+    </h2>
+  </div>
+</th>
+  </tr>
+  <tr>
+    <th>
+<div class="block">
+<div class="patientlist" style="border:1px solid black;width:300px;height:550px;overflow:scroll;" >
+  <ul>
+    <ol>
+    <li  *ngFor="let patient of patients | filter : search" [routerLink]="[patient.patientId]"  (click)="onClick(patient)" >
+      <a> {{patient.name}}  {{patient.surname}}
+        <p> {{patient.dateOfBirth}} </p>
+      </a>
+    </li>
+    </ol>
+  </ul>
+</div>
+  <br />
+</div>
+    </th>
+    <th class="view" width="100%">
+<div class="block">
+<div class="routerLinkClass" style="width: 800px">
+<router-outlet addEmiter="onAdd($event)"></router-outlet>
+</div>
+</div>
+    </th>
+  </tr>
+</table>

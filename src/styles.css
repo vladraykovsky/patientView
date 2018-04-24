@@ -1,0 +1,12 @@
+
+
+div.block{
+  display: inline;
+}
+
+div.block{
+  float: left;
+}.clear{
+   clear: both;
+ }
+

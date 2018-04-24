@@ -1,0 +1,12 @@
+
+
+<input [(ngModel)]="patient.name" placeholder="name" />
+<input [(ngModel)]="patient.surname" placeholder="surname" />
+<input [(ngModel)]="patient.dateOfBirth"
+       placeholder="date of birth in format ****-**-**"  />
+<input [(ngModel)]="patient.country" placeholder="country"/>
+<input [(ngModel)]="patient.state" placeholder="state"/>
+<input [(ngModel)]="patient.address" placeholder="adress"/>
+<input [(ngModel)]="patient.sex" placeholder="sex" />
+<button (click)="save()"> save changes </button>
+<button  (click)="chancel()" > chancel </button>
